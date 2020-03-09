@@ -1,4 +1,4 @@
-package com.nanafebriana.conferencedemo.models;
+package com.nana.conference.models;
 
 import java.util.List;
 
@@ -8,9 +8,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.JoinColumn;
 
 @Entity(name = "sessions")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Session {
 
 	@Id

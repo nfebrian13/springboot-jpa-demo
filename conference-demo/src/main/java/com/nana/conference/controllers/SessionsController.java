@@ -1,4 +1,4 @@
-package com.nanafebriana.conferencedemo.controllers;
+package com.nana.conference.controllers;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nanafebriana.conferencedemo.models.Session;
-import com.nanafebriana.conferencedemo.repositories.SessionRepository;
+import com.nana.conference.models.Session;
+import com.nana.conference.repositories.SessionRepository;
 
 @RestController
 @RequestMapping("/api/v1/sessions")

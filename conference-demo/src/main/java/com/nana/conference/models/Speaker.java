@@ -1,4 +1,4 @@
-package com.nanafebriana.conferencedemo.models;
+package com.nana.conference.models;
 
 import java.util.List;
 
@@ -11,7 +11,11 @@ import javax.persistence.ManyToMany;
 
 import org.hibernate.annotations.Type;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity(name = "speakers")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Speaker {
 
 	@Id
@@ -29,6 +33,7 @@ public class Speaker {
 	private byte[] speaker_photo;
 
 	@ManyToMany(mappedBy = "speakers")
+	@JsonIgnore
 	private List<Session> sessions;
 
 	public Speaker() {
